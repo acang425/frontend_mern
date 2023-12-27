@@ -50,6 +50,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "http-proxy-middleware": "^2.0.6",
     "vite-plugin-imp": "^2.4.0",
     "vite-plugin-style-import": "^2.0.0"
   }
