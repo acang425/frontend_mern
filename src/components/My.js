@@ -13,8 +13,6 @@ import { WarningCircle } from '@zarm-design/icons';
 import ListItem from 'zarm/lib/list/ListItem';
 import { Link } from 'react-router-dom';
 import u49 from './images/u49.svg'
-
-
 import root from './Approot';
 
 
@@ -44,13 +42,13 @@ const example = [[
             <div style={{ width: '50%', float: 'left' }}>
                 <div>
                     <span style={{ fontSize: '25px', fontWeight: '600' }}>
-                        <span style={{ marginRight: '15px' }}>Windir</span>
+                        <span style={{ marginRight: '15px' }}>     {localStorage.getItem('name')==null?"Windir":localStorage.getItem('name')}</span>
                     </span>
                     <div>
-                        18033441984
+                        {localStorage.getItem('phone')==null?18033441984:localStorage.getItem('phone')}
                     </div>
                     <div>
-                资料填写
+                资料填写->
                     </div>
                 </div>
 
@@ -116,7 +114,7 @@ function My() {
                                     <List.Item prefix={icons[1]} style={{ fontSize: '20px', height: '70px' }} hasArrow title="应用打分" onClick={() => {navigate('/StudentEva') }} />
                                     <List.Item prefix={icons[2]} style={{ fontSize: '20px', height: '70px' }} hasArrow title="我的粉丝" onClick={() => {navigate('/Myfollower')}} />
                                     <List.Item prefix={icons[3]} style={{ fontSize: '20px', height: '70px' }} hasArrow title="我的消息" onClick={() => { }} />
-                                    <List.Item prefix={icons[4]} style={{ fontSize: '20px', height: '70px' }} hasArrow title="历史记录" onClick={() => { }} />
+                                    <List.Item prefix={icons[4]} style={{ fontSize: '20px', height: '70px' }} hasArrow title="激励排行" onClick={() => {navigate('/MyEncourage') }} />
                                     <List.Item prefix={icons[5]} style={{ fontSize: '20px', height: '70px' }} title="内容推送" suffix={<Switch checked={checked} onChange={setChecked} />} />
                                 </List>
                                 <List>
@@ -159,4 +157,4 @@ function My() {
     );
 }
 
-export default root(My);
+export default My;

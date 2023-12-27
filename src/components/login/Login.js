@@ -44,7 +44,7 @@ function Login() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('https://backend-mern-ten.vercel.app/api/login', formData);
+      const response = await axios.post('http://localhost:8080/api/login', formData);
       const token = response.data.data.access_token;
       console.log(response.data);
       localStorage.setItem('token', token); // 将token存储在localStorage中

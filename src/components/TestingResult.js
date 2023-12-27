@@ -20,7 +20,6 @@ import s2 from './images/s2.svg'
 import s3 from './images/s3.svg'
 import ali from './images/ali.svg'
 import { useNavigate } from 'react-router-dom';
-
 import root from './Approot';
 
 const PreviewIcon = Icon.createFromIconfont(
@@ -89,11 +88,15 @@ function TestingResult() {
                             // textAlign: 'center'
                         }}
                     >
-                        <div style={{ background: '#528787', width: '95%', textAlign: 'center', borderRadius: '20px', height: '300px', marginLeft: '2.5%', marginTop: '10px' }}>
-                            <div>
-                                <svg style={{ marginTop: '10%' }} t="1703581625656" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3846" width="100" height="100"><path d="M675.328 117.717333A425.429333 425.429333 0 0 0 512 85.333333C276.352 85.333333 85.333333 276.352 85.333333 512s191.018667 426.666667 426.666667 426.666667 426.666667-191.018667 426.666667-426.666667c0-56.746667-11.093333-112-32.384-163.328a21.333333 21.333333 0 0 0-39.402667 16.341333A382.762667 382.762667 0 0 1 896 512c0 212.074667-171.925333 384-384 384S128 724.074667 128 512 299.925333 128 512 128c51.114667 0 100.8 9.984 146.986667 29.12a21.333333 21.333333 0 0 0 16.341333-39.402667zM456.704 305.92C432.704 289.152 405.333333 303.082667 405.333333 331.797333v360.533334c0 28.586667 27.541333 42.538667 51.370667 25.856l252.352-176.768c21.76-15.253333 21.632-43.541333 0-58.709334l-252.373333-176.768z m-8.597333 366.72V351.466667l229.269333 160.597333-229.269333 160.597333z" fill="#ffffff" p-id="3847"></path></svg>
-                            </div>
-                            <div style={{ color: 'white', fontSize: '20px', marginTop: '20px' }}>查看视频回放</div>
+                        <div>
+                            <video controls width="100%">
+                                {/* <source src="/media/cc0-videos/flower.webm" type="video/webm" /> */}
+
+                                <source src="https://upos-sz-mirrorcos.bilivideo.com/upgcxcode/91/23/1037322391/1037322391-1-208.mp4?e=ig8euxZM2rNcNbRVhwdVhwdlhWdVhwdVhoNvNC8BqJIzNbfq9rVEuxTEnE8L5F6VnEsSTx0vkX8fqJeYTj_lta53NCM=&uipk=5&nbs=1&deadline=1703687868&gen=playurlv2&os=bcache&oi=2584261250&trid=0000e7305faa8dca4dafa063669888dcda50T&mid=0&platform=html5&upsig=0da136c995ea20e587fca112febb8bca&uparams=e,uipk,nbs,deadline,gen,os,oi,trid,mid,platform&cdnid=65869&bvc=vod&nettype=0&bw=36831&orderid=0,3&buvid=&build=0&mobi_app=&f=T_0_0&logo=80000000" type="video/mp4" />
+                            </video>
+                        </div>
+                        <div style={{ background: '#528787', width: '95%', textAlign: 'center', borderRadius: '20px', height: '50px', marginLeft: '2.5%', marginTop: '10px' }}>
+                            <div style={{ color: 'white',fontWeight:'bold', fontSize: '20px', paddingTop: '10px' }}>查看视频回放</div>
                         </div>
                         <div style={{ border: '#E3E3E3 5px solid', background: '#F5F5F5', width: '95%', textAlign: 'center', borderRadius: '20px', height: '300px', marginLeft: '2.5%', marginTop: '10px' }}>
                             <Grid bordered="false" style={{ marginTop: '50px' }}>
@@ -122,9 +125,9 @@ function TestingResult() {
                             <Button style={{ background: '#0C5757', color: 'white', marginLeft: '320px' }}>开通会员</Button>
                         </div>
                         <div style={{ padding: '20px', border: '#E3E3E3 5px solid', background: '#F5F5F5', width: '95%', borderRadius: '20px', marginLeft: '2.5%', marginTop: '10px' }}>
-                        <Link to='/InterviewEva'><Button style={{ marginLeft: '15%',background: '#206464', color: 'white', fontWeight: 'bold' }} size='lg'>面试评价</Button></Link>
-                        <Link to='/ExpertEva'><Button style={{ marginLeft: '15%', background: '#206464', color: 'white', fontWeight: 'bold' }} size='lg'>专家评价</Button></Link>
-                            
+                            <Link to='/InterviewEva'><Button style={{ marginLeft: '15%', background: '#206464', color: 'white', fontWeight: 'bold' }} size='lg'>面试评价</Button></Link>
+                            <Link to='/ExpertEva'><Button style={{ marginLeft: '15%', background: '#206464', color: 'white', fontWeight: 'bold' }} size='lg'>专家评价</Button></Link>
+
                         </div>
                         <div style={{ padding: '20px', border: '#E3E3E3 5px solid', background: '#F5F5F5', width: '95%', borderRadius: '20px', marginLeft: '2.5%', marginTop: '10px' }}>
                             <h1 style={{ fontSize: '30px', color: '#0C5757' }}> 会员专享 </h1>

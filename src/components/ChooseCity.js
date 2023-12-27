@@ -11,13 +11,13 @@ import { ArrowLeft } from '@zarm-design/icons';
 import './App.css'
 import ListItem from 'zarm/lib/list/ListItem';
 import { Link } from 'react-router-dom';
-
+import { useNavigate } from 'react-router-dom';
 import root from './Approot';
 
 function ChooseCity() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
-  const [chosenCity, setChosenCity] = useState('广州');
+  const [chosenCity, setChosenCity] = useState(localStorage.getItem('city')=='null'?"广州":localStorage.getItem('city'));
   const [locateCity, setLocateCity] = useState('广州');
   var cityArray = ['当前城市', chosenCity, '定位城市', locateCity]
   const cssVar1 = { color: '#999999', fontSize: '20px' }
@@ -45,6 +45,7 @@ function ChooseCity() {
     "南京",
     "郑州"
   ];
+  const navigate=useNavigate();
 
   return (
     <div className="ChooseCity">
@@ -54,7 +55,7 @@ function ChooseCity() {
             <NavBar
               //   left={<span><ArrowLeft style={{color:'white'}} theme="primary" onClick={() => window.history.back()} /><span style={{color:'white'}}>返回</span></span>
               // }
-              left={<Link to={{ pathname: '/home', state: { chosenCity } }}><ArrowLeft style={{ color: 'white' }} theme="primary" /> </Link>
+              left={<ArrowLeft onClick={()=>{localStorage.setItem('city',chosenCity);navigate('/home')}} style={{ color: 'white' }} theme="primary" /> 
               }
               title="选择报考城市"
               style={{ background: '#0C5757', "--title-color": 'white', "--title-font-weight": '700', '--title-font-size': '20px', '--height': '51px' }}
@@ -119,4 +120,4 @@ function ChooseCity() {
   );
 }
 
-export default root(ChooseCity);
+export default ChooseCity;

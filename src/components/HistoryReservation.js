@@ -37,9 +37,8 @@ const example = [
         <p style={cssP}>预约专家：李萍</p>
         </div>
       </div>
-      <div style={{paddingLeft:'180px'}}>
-        <Button shape='radius' style={{height:'30px',marginRight:'5px',border:'3px solid #0D5858'}}>取消预约</Button>
-        <Button shape='radius' style={{height:'30px',background:'#0D5858',color:'white'}}>提交预约</Button>
+      <div style={{paddingLeft:'280px'}}>
+        <Button shape='radius' style={{height:'30px',background:'#0D5858',color:'white'}}>联系专家</Button>
       </div>
     </div>
   </div>
@@ -148,4 +147,4 @@ function HistoryReservation() {
   );
 }
 
-export default root(HistoryReservation);
+export default HistoryReservation;

@@ -7,11 +7,9 @@ import 'zarm/dist/zarm.css';
 import './App.css'
 import { NavBar } from 'zarm';
 import { useNavigate } from 'react-router-dom';
-
+import root from './Approot';
 import { ArrowRight } from '@zarm-design/icons';
 import  {Link,useParams } from 'react-router-dom';
-
-import root from './Approot';
 const MyIcon = Icon.createFromIconfont('//lf1-cdn-tos.bytegoofy.com/obj/iconpark/svg_20337_14.627ee457cf7594fbbce6d5e14b8c29ef.js');
 Image.defaultProps = {
   placeholder: true,
@@ -89,7 +87,7 @@ const arr2 = [
             <NavBar
               style={{ height: '100px', background: 'white' }}
               left={<span><svg t="1700397272434" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2372" width="40" height="40"><path d="M512 938.666667c-53.333333 0-384-257.258667-384-469.333334S299.925333 85.333333 512 85.333333s384 171.925333 384 384-330.666667 469.333333-384 469.333334z m0-352c64.8 0 117.333333-52.533333 117.333333-117.333334s-52.533333-117.333333-117.333333-117.333333-117.333333 52.533333-117.333333 117.333333 52.533333 117.333333 117.333333 117.333334z" fill="#000000" p-id="2373"></path></svg>
-                <Link to='/choosecity'><span style={{ color: '#333333', fontSize: '30px', fontWeight: 'bold' }}>广州</span></Link></span>}
+                <Link to='/choosecity'><span style={{ color: '#333333', fontSize: '30px', fontWeight: 'bold' }}>{localStorage.getItem('city')=='null'?"广州":localStorage.getItem('city')}</span></Link></span>}
               title=""
               right={<a style={{ color: '#0C5757', fontSize: '30px', fontWeight: 'bold' }}></a>}
             />
@@ -178,4 +176,4 @@ const arr2 = [
   );
 }
 
-export default root(Home);
+export default Home;

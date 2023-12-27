@@ -41,7 +41,7 @@ function FindPassword() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.patch(' https://backend-mern-ten.vercel.app/api/user/update', formData);
+      const response = await axios.patch(' http://localhost:8080/api/user/update', formData);
       const token = response.data.data.access_token;
       console.log(response.data);
       // console.log(item);

@@ -68,7 +68,7 @@ function MyFollower() {
         </div>
       </div>
       <div>
-        <p style={{ fontSize: '20px', color: '#333435', marginLeft: '30px' }}>专注交互原型设计</p>
+        <p style={{ fontSize: '20px', color: '#333435', marginLeft: '30px' }}>奋斗正当时</p>
       </div>
     </div>
   ]

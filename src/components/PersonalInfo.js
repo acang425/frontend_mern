@@ -10,12 +10,13 @@ import './App.css'
 import { NavBar } from 'zarm';
 import { ArrowLeft } from '@zarm-design/icons';
 import { useScroll, Select,Panel, Messag,Calendar,Textarea  } from 'zarm';
-
+import { useNavigate } from 'react-router-dom';
 
 import root from './Approot';
 
 
 function MyInfo() {
+  const navigate=useNavigate();
     const list = [];
     list.push(<List.Item key={1} title={``} />);
     const [scrollTop, setScrollTop] = useState(0);
@@ -29,13 +30,8 @@ function MyInfo() {
         },
     });
 
-    const [mode, setMode] = useState('range');
-    const [value, setValue] = useState([new Date('2023/12/18'), new Date('2023/12/19')]);
-    const [min, setMin] = useState(new Date('2023/12/1'));
-    const [max, setMax] = useState(new Date('2024/3/1'));
-    const [custom, setCustom] = useState(false);
-    const [direction, setDirection] = useState('vertical');
-    const [header, setHeader] = useState(false);
+    const[name,setName]=useState();
+    const[phone,setPhone]=useState();
 
     const [text, setText] = useState([]);
     const [selectedEducation, setSelectedEducation] = useState(null);
@@ -97,11 +93,18 @@ function MyInfo() {
          <Panel spacing style={{ padding: '20px' }}>
           <div className="form-item" style={{ padding: '20px' }}>
             <label>真实姓名</label>
-            <Input placeholder="请输入您的真实姓名" />
+            <Input  value={name}
+                        onChange={(e) => {
+                          setName(e.target.value);
+                        }}
+                        placeholder="请输入您的真实姓名" />
           </div>
           <div className="form-item" style={{ padding: '20px' }}>
             <label>手机号码</label>
-            <Input type="number" placeholder="请输入您的手机号码" />
+            <Input value={phone}
+                        onChange={(e) => {
+                          setPhone(e.target.value);
+                        }} type="number" placeholder="请输入您的手机号码" />
           </div>
           <div className="form-item" style={{ padding: '20px' }}>
             <label>邮箱地址</label>
@@ -149,7 +152,11 @@ function MyInfo() {
           </Panel>
           </div>
           <div style={{ display: 'flex', justifyContent: 'center'}}>
-          <Button theme="primary">提交</Button>
+          <Button onClick={()=>{
+            localStorage.setItem('name',name);
+            localStorage.setItem('phone',phone);
+            navigate('/My');
+          }} theme="primary">提交</Button>
           </div>
         </form>
       </div>

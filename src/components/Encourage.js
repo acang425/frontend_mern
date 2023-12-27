@@ -57,7 +57,7 @@ function example(i) {
         </div>
       </div>
       <div style={{ width: '100%' }}>
-        <p style={{ margin: '50px', fontSize: '20px', color: '#333435', marginLeft: '30px' }}>专注交互原型设计</p>
+        <p style={{ marginLeft:'20px',margin: '50px', fontSize: '20px', color: '#333435' }}>奋斗正当时</p>
       </div>
     </div>
   ]
@@ -118,7 +118,7 @@ function MyEncourage() {
                       </div>
                     </div>
                     <div style={{ width: '100%' }}>
-                      <p style={{ margin: '50px', fontSize: '20px', color: '#333435', marginLeft: '30px' }}>专注交互原型设计</p>
+                      <p style={{ margin: '50px', fontSize: '20px', color: '#333435', marginLeft: '30px' }}>奋斗正当时</p>
                     </div>
                   </div>
                 </ListItem>
