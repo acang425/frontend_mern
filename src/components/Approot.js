@@ -9,7 +9,7 @@ const root = (WrappedComponent) => {
     const token = localStorage.getItem('token');
 
     useEffect(() => {
-      if (!token||token!='undefined') {
+      if (!token||token=='undefined') {
         console.log('请先登陆');
         navigate('/', { replace: true });
       }
