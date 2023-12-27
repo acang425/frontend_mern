@@ -3,43 +3,44 @@
 //react 核心包
 import React from 'react';
 import ReactDOM from 'react-dom';
-import PrivateRoute from './PrivateRoute';
 //项目的根组件
-import Treaty from './Treaty';
-import Login from './Login';
-import Register from './Register';
-import RegisterSuccess from './RegisterSuccess';
-import FindPassword from './FindPassword';
-import ChooseCity from './ChooseCity'
-import ChooseTarget from './ChooseTarget'
-import Home from './Home'
-import ChooseType from './ChooseType'
-import SpecialistList from './SpecialistList'
-import SpecialistDetails from './SpecialistDetails'
-import ReservationForm from './ReservationForm'
-import ReservationSuccess from './ReservationSuccess'
-import ReservationSuccess_Onsite from './ReservationSuccess_Onsite'
-import NavigationRoute from './NavigationRoute'
-import HistoryReservation from './HistoryReservation'
-import SpecialistInterview from './SpecialistInterview'
-import EquipmentTesting from './EquipmentTesting'
-import OnlySound from './OnlySound'
-import Video from './Video';
-import MyCalendar from './Calendar';
-import SpecialistTesting from './SpecialistTesting';
-import StudentEvaluation from './StudentEvaluation';
-import TestingResult from './TestingResult';
-import SpecialistLunshu from './SpecialistLunshu';
-import ResultAnalysis from './ResultAnalysis';
-import PCTest from './PCTest';
-import StudentEva from'./StudentEva';
-import InterviewEva from './InterviewEva'
-import ExpertEva from './ExpertEva'
-import MyFollower from './Followers'
-import MyEncourage from './Encourage';
-import CommentR from './CommentRec';
-import My from './My';
-import MyInfo from './PersonalInfo';
+import Treaty from './components/login/Treaty';
+import Login from './components/login/Login';
+import Register from './components/login/Register';
+import RegisterSuccess from './components/login/RegisterSuccess';
+import FindPassword from './components/login/FindPassword';
+import ChooseCity from './components/ChooseCity'
+import ChooseTarget from './components/ChooseTarget'
+import Home from './components/Home'
+import ChooseType from './components/ChooseType'
+import SpecialistList from './components/SpecialistList'
+import SpecialistDetails from './components/SpecialistDetails'
+import ReservationForm from './components/ReservationForm'
+import ReservationSuccess from './components/ReservationSuccess'
+import ReservationSuccess_Onsite from './components/ReservationSuccess_Onsite'
+import NavigationRoute from './components/NavigationRoute'
+import HistoryReservation from './components/HistoryReservation'
+import SpecialistInterview from './components/SpecialistInterview'
+import EquipmentTesting from './components/EquipmentTesting'
+import OnlySound from './components/OnlySound'
+import Video from './components/Video';
+import MyCalendar from './components/Calendar';
+import SpecialistTesting from './components/SpecialistTesting';
+import StudentEvaluation from './components/StudentEvaluation';
+import TestingResult from './components/TestingResult';
+import SpecialistLunshu from './components/SpecialistLunshu';
+import ResultAnalysis from './components/ResultAnalysis';
+import PCTest from './components/PCTest';
+import StudentEva from'./components/StudentEva';
+import InterviewEva from './components/InterviewEva'
+import ExpertEva from './components/ExpertEva'
+import MyFollower from './components/Followers'
+import MyEncourage from './components/Encourage';
+import CommentR from './components/CommentRec';
+import My from './components/My';
+import MyInfo from './components/PersonalInfo';
+
+import Approot from './components/Approot';
 // //把根组件渲染到id为root的dom节点上
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(
