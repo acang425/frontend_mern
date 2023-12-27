@@ -1,0 +1,375 @@
+fieldset {
+  border: 0;
+  border-top: 1px solid #ddd;
+  text-align: center;
+
+  legend {
+    padding: 0 5%;
+  }
+}
+
+h1 {
+  font-size: large;
+}
+
+.App_header {
+  text-align: center;
+  padding: 20px;
+  height: 40%;
+}
+
+.App_title {
+  position: relative;
+  top: 50%;
+  width: 100%;
+  height: 20%;
+}
+
+.App_column {
+  float: left;
+  width: 100%;
+  height: 33%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.App_text_column {
+  float: left;
+  width: 100%;
+  height: 5%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #a1a1a1;
+}
+
+.phone {
+  width: 540px;
+  height: 1155px;
+  position: relative;
+  /* border: solid black; */
+}
+
+.ChooseCity_column {
+  float: left;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+
+.ChooseTarget_column {
+  width: 20%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #f2f2f2;
+}
+
+/* 列后清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.ChooseTarget_h1 {
+  font-size: large;
+}
+
+.home_line {
+  background-color: #0C5757;
+  height: 70px;
+
+}
+
+.home_linetext {
+  color: #ffffff;
+  font-size: 23px;
+  font-weight: 700;
+  padding-top: 20px;
+  padding-left: 10px;
+}
+
+.ChooseType_column {
+  width: 100%;
+  height: 100%;
+  float: left;
+  border-right: 1px solid #f2f2f2;
+}
+
+.item {
+  width: 100%;
+  /* background-color: aqua; */
+  /* border-right: 1px solid; */
+  white-space: nowrap;
+  display: inline-block;
+}
+
+.scroll {
+  text-align: center;
+  white-space: nowrap;
+  width: 540px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+
+}
+
+.float_img {
+  /* background-color: */
+  overflow: hidden;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  /* border: 1px black; */
+  left: 400px;
+  top: 250px;
+  /* text-align: center; */
+}
+
+.RS_float {
+  /* background-color: */
+  overflow: hidden;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  /* border: 1px black; */
+  left: 50px;
+  top: 600px;
+  /* text-align: center; */
+}
+
+.SI_float {
+  /* background-color: */
+  overflow: hidden;
+  z-index: 9999;
+  position: fixed;
+  width: 100%;
+  height: 50%;
+  /* border: 1px black; */
+  left: 50px;
+  top: 400px;
+  /* text-align: center; */
+}
+
+
+
+/* ---------------新增样式-------------------- */
+
+.dropzone {
+  border: 2px dashed #ccc;
+  padding: 20px;
+  text-align: center;
+}
+
+.dropzone p {
+  margin: 10px 0;
+}
+
+.dropzone p:last-child {
+  margin-bottom: 0;
+}
+
+.record-list {
+  padding: 20px;
+}
+
+.record-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #F9F9F9;
+  border-radius: 8px;
+}
+
+.record-info {
+  display: flex;
+  align-items: center;
+}
+
+.record-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.record-details {
+  display: flex;
+  flex-direction: column;
+  font-size: px;
+}
+
+.record-date,
+.record-time {
+  color: #999999;
+}
+
+.record-score {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.follower-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 500px;
+}
+
+.follower-avatar {
+  width: 40px;
+  height: 40px;
+  margin-right: 16px;
+}
+
+.follower-info {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.follower-name {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.follower-bio {
+  font-size: 12px;
+  color: #999999;
+  margin-top: 4px;
+}
+
+.follow-button {
+  width: 80px;
+  margin-left: auto;
+  right: 0;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  background-color: #f8f8f8;
+}
+
+.user-rank {
+  font-size: 32px;
+  margin-right: 16px;
+}
+
+.user-avatar {
+  width: 64px;
+  height: 64px;
+  margin-right: 16px;
+}
+
+.user-name {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.user-bio {
+  margin-top: 8px;
+  color: gray;
+}
+
+.user-coins {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+}
+
+.rank {
+  font-size: 20px;
+  color: gray;
+  margin-right: 16px;
+}
+
+.name {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.bio {
+  margin-top: 4px;
+  color: gray;
+  font-size: 14px;
+}
+
+.coins {
+  margin-left: auto;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: rgb(62, 53, 53);
+}
+
+.icon-gold {
+  margin-right: 4px;
+  font-size: 16px;
+  color: #fadb14;
+}
+
+
+.top-image-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 200px;
+  margin-bottom: 16px;
+}
+
+.top-image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+/* MyInfoForm.css */
+.my-info-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form-container {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-item {
+  margin-bottom: 15px;
+}
+
+.form-item label {
+  display: block;
+  margin-bottom: 5px;
+}
