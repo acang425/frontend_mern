@@ -157,4 +157,4 @@ function My() {
     );
 }
 
-export default My;
+export default root(My);

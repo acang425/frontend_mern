@@ -92,7 +92,7 @@ function ReservationSuccess() {
           <NavBar
             //   left={<span><ArrowLeft style={{color:'white'}} theme="primary" onClick={() => window.history.back()} /><span style={{color:'white'}}>返回</span></span>
             // }
-            left={<ArrowLeft style={{ color: 'white' }} theme="primary" onClick={() => window.history.back()} />
+            left={<Link to='/home'><ArrowLeft style={{ color: 'white' }} theme="primary" /></Link>
             }
             title="面试预约"
             style={{ background: '#0C5757', "--title-color": 'white', "--title-font-weight": '700', '--title-font-size': '20px', '--height': '51px' }}
