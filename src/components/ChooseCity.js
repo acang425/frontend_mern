@@ -120,4 +120,4 @@ function ChooseCity() {
   );
 }
 
-export default ChooseCity;
+export default root(ChooseCity);
