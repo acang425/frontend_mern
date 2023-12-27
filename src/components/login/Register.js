@@ -40,7 +40,7 @@ function Register() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const response = await axios.post('http://localhost:8080/api/user/create', formData);
+      const response = await axios.post('https://backend-mern-ten.vercel.app/api/user/create', formData);
       console.log('register success');
       if(account!=''&&username!=''&&password!='') navigate('/registersuccess');
       else alert("手机号码、用户名称或密码为空");
