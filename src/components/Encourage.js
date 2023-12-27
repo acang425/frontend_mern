@@ -107,7 +107,7 @@ function MyEncourage() {
                       <div style={{ paddingLeft: '15px', width: '40%', float: 'left' }}>
                         <div>
                           <span style={{ fontSize: '25px', fontWeight: '600' }}>
-                            <span style={{ marginRight: '15px' }}>Windir</span>
+                            <span style={{ marginRight: '15px' }}>{localStorage.getItem('name')==null?"Windir":localStorage.getItem('name')}</span>
                           </span>
                         </div>
                       </div>
