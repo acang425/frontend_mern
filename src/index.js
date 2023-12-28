@@ -39,6 +39,7 @@ import MyEncourage from './components/Encourage';
 import CommentR from './components/CommentRec';
 import My from './components/My';
 import MyInfo from './components/PersonalInfo';
+import Recorder from './components/Recorder';
 
 import Approot from './components/Approot';
 // //把根组件渲染到id为root的dom节点上
@@ -92,6 +93,7 @@ function App() {
                     <Route path="/CommentR" element={<CommentR/>} />
                     <Route path="/My" element={<My/>} />
                     <Route path="/MyInfo" element={<MyInfo/>} />
+                    <Route path="/Recorder" element={<Recorder/>} />
                     {/* <Route path="/home:city" element={<Home/>}/> */}
 
                 </Routes>

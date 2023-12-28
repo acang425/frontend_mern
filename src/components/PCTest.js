@@ -19,6 +19,7 @@ import s1 from './images/s1.svg'
 import s2 from './images/s2.svg'
 import s3 from './images/s3.svg'
 import ali from './images/ali.svg'
+import Recorder from './Recorder';
 
 import root from './Approot';
 const PreviewIcon = Icon.createFromIconfont(
@@ -46,19 +47,19 @@ function PCTest() {
                 <svg onClick={() => { setChooseRen(2); }} t="1703602507057" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="3475" width="100" height="100"><path d="M512 1024C228.266667 1024 0 795.733333 0 512S228.266667 0 512 0s512 228.266667 512 512-228.266667 512-512 512z m0-42.666667c260.266667 0 469.333333-209.066667 469.333333-469.333333S772.266667 42.666667 512 42.666667 42.666667 251.733333 42.666667 512s209.066667 469.333333 469.333333 469.333333z m-106.666667-682.666666c12.8 0 21.333333 8.533333 21.333334 21.333333v384c0 12.8-8.533333 21.333333-21.333334 21.333333s-21.333333-8.533333-21.333333-21.333333V320c0-12.8 8.533333-21.333333 21.333333-21.333333z m213.333334 0c12.8 0 21.333333 8.533333 21.333333 21.333333v384c0 12.8-8.533333 21.333333-21.333333 21.333333s-21.333333-8.533333-21.333334-21.333333V320c0-12.8 8.533333-21.333333 21.333334-21.333333z" fill="#206464" fill-opacity=".9" p-id="3476"></path></svg>            </div>
         </div>],
         [<div>
-            <div style={{ padding: '30px',color: '#333333', fontSize: '25px', marginTop: '20px', fontWeight: 'bold' }}>录音已保存，请选择</div>
+            <div style={{ padding: '30px', color: '#333333', fontSize: '25px', marginTop: '20px', fontWeight: 'bold' }}>录音已保存，请选择</div>
             <div>
-                <span style={{padding:'10px'}}>
-                    <svg onClick={()=>{setChooseRen(0);}} t="1703602624358" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4526" width="40" height="40"><path d="M512 64C264.8 64 64 264.8 64 512s200.8 448 448 448 448-200.8 448-448S759.2 64 512 64zM428 718.4l-45.6 45.6-45.6-45.6-116-117.6 45.6-45.6L383.2 672l367.2-367.2 45.6 45.6-368 368z" p-id="4527" fill="#206464"></path></svg>
-                    <span onClick={()=>{setChooseRen(0);}} style={{fontSize:'20px'}}>完成录制</span>
+                <span style={{ padding: '10px' }}>
+                    <svg onClick={() => { setChooseRen(0); }} t="1703602624358" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="4526" width="40" height="40"><path d="M512 64C264.8 64 64 264.8 64 512s200.8 448 448 448 448-200.8 448-448S759.2 64 512 64zM428 718.4l-45.6 45.6-45.6-45.6-116-117.6 45.6-45.6L383.2 672l367.2-367.2 45.6 45.6-368 368z" p-id="4527" fill="#206464"></path></svg>
+                    <span onClick={() => { setChooseRen(0); }} style={{ fontSize: '20px' }}>完成录制</span>
                 </span>
-                <span  style={{padding:'10px'}}>
-                <svg onClick={()=>{setChooseRen(1);}} t="1703602700512" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5548" width="40" height="40"><path d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0z m0 981.333333C253.866667 981.333333 42.666667 770.133333 42.666667 512S253.866667 42.666667 512 42.666667s469.333333 211.2 469.333333 469.333333-211.2 469.333333-469.333333 469.333333z" fill="#206464" p-id="5549"></path><path d="M672 441.6l-170.666667-113.066667c-57.6-38.4-106.666667-12.8-106.666666 57.6v256c0 70.4 46.933333 96 106.666666 57.6l170.666667-113.066666c57.6-42.666667 57.6-106.666667 0-145.066667z" fill="#206464" p-id="5550"></path></svg>                    
-                <span  onClick={()=>{setChooseRen(1);}} style={{fontSize:'20px'}}>继续录制</span>
+                <span style={{ padding: '10px' }}>
+                    <svg onClick={() => { setChooseRen(1); }} t="1703602700512" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5548" width="40" height="40"><path d="M512 0C230.4 0 0 230.4 0 512s230.4 512 512 512 512-230.4 512-512S793.6 0 512 0z m0 981.333333C253.866667 981.333333 42.666667 770.133333 42.666667 512S253.866667 42.666667 512 42.666667s469.333333 211.2 469.333333 469.333333-211.2 469.333333-469.333333 469.333333z" fill="#206464" p-id="5549"></path><path d="M672 441.6l-170.666667-113.066667c-57.6-38.4-106.666667-12.8-106.666666 57.6v256c0 70.4 46.933333 96 106.666666 57.6l170.666667-113.066666c57.6-42.666667 57.6-106.666667 0-145.066667z" fill="#206464" p-id="5550"></path></svg>
+                    <span onClick={() => { setChooseRen(1); }} style={{ fontSize: '20px' }}>继续录制</span>
                 </span>
                 <span>
-                <svg onClick={()=>{setChooseRen(0);}} t="1703602785941" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7458" width="40" height="40"><path d="M203.946667 700.586667l146.773333-215.466667H248.746667a315.733333 315.733333 0 1 1 106.24 264.533333L301.226667 819.2a404.053333 404.053333 0 1 0-140.373334-334.08H56.746667l147.2 215.466667z" fill="#206464" p-id="7459"></path></svg>                    
-                <span onClick={()=>{setChooseRen(0);}} style={{fontSize:'20px'}}>重新录制</span>
+                    <svg onClick={() => { setChooseRen(0); }} t="1703602785941" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="7458" width="40" height="40"><path d="M203.946667 700.586667l146.773333-215.466667H248.746667a315.733333 315.733333 0 1 1 106.24 264.533333L301.226667 819.2a404.053333 404.053333 0 1 0-140.373334-334.08H56.746667l147.2 215.466667z" fill="#206464" p-id="7459"></path></svg>
+                    <span onClick={() => { setChooseRen(0); }} style={{ fontSize: '20px' }}>重新录制</span>
                 </span>
             </div>
         </div>]
@@ -152,6 +153,7 @@ function PCTest() {
                             <h1 style={{ fontSize: '25px', color: '#0C5757' }}>论述题 </h1>
                             <p style={{ fontSize: '20px', fontWeight: 'bold', color: '#333333' }}>据报道，新大学生入职后，一年内有30%的人离职，三年内变动两次以上工作的接近六成。以往这种现象较多发生于企业，但近年来，在部分地区政府机关新录用的人员中，这种现象也有逐年增多的趋势。请谈谈你的看法。</p>
                         </div>
+                       
                         <div style={{ padding: '20px', border: '#E3E3E3 5px solid', background: '#F5F5F5', width: '95%', borderRadius: '20px', marginLeft: '2.5%', marginTop: '10px' }}>
                             <h1 style={{ fontSize: '25px', color: '#0C5757' }}>音频读题 </h1>
                             <div style={{ background: '#206464', height: '150px', borderRadius: '20px' }}>
@@ -165,14 +167,15 @@ function PCTest() {
 
                                 </div>                            </div>
                         </div>
+                        
                         <div style={{ textAlign: 'center', padding: '20px', border: '#E3E3E3 5px solid', background: '#F5F5F5', width: '95%', borderRadius: '20px', marginLeft: '2.5%', marginTop: '10px' }}>
                             <div style={{ background: '#FFFFFF', width: '100%', textAlign: 'center', borderRadius: '20px', height: '300px', marginTop: '10px' }}>
 
-                                {ren[chooseRen]}
+                            <Recorder></Recorder>
                             </div>
 
                         </div>
-
+                        
                         <div style={{ padding: '20px', border: '#E3E3E3 5px solid', background: '#F5F5F5', width: '95%', borderRadius: '20px', marginLeft: '2.5%', marginTop: '10px' }}>
                             <h1 style={{ fontSize: '25px', color: '#0C5757' }}>熊猫审题 </h1>
                             <div style={{ fontSize: '20px', fontWeight: 'normal', color: '#333333' }}>
